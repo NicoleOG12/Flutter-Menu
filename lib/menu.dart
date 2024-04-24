@@ -11,7 +11,10 @@ class Menu extends StatelessWidget {
         child: ListView(
           padding: EdgeInsets.symmetric(horizontal: 20),
           children: [
-            //const SizedBox(
+           cabecalho(
+           nome: "Nicole Oliveira",
+           email: "nicole@gmail.com", 
+           imagem: "https://www.google.com/url?sa=i&url=https%3A%2F%2Faminoapps.com%2Fc%2Fas-meninas-super-poderosas-4840895%2Fpage%2Fitem%2Fflorzinha%2FVm0Q_xYTvIMbJEDbggX6eEQWr6WKnB7N3x&psig=AOvVaw1lDClDaYVyLtPXOBCHaeIj&ust=1714068542834000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCOjji4e524UDFQAAAAAdAAAAABAE),"), //const SizedBox(
              // height: 16,) espaçamento
              itemmenu(texto: "Home", icone: Icons.home),
             const SizedBox(
@@ -44,20 +47,25 @@ cabecalho({
   required String email,
   required String imagem,
 })=>
-ListView(
-  children: [
-    CircleAvatar(
-      radius: 30,
-      backgroundImage: NetworkImage(imagem),
-    ),
-    const SizedBox(width: 20,),
-    Column(
-      children: [
-        Text(nome, style: TextStyle(fontSize: 10, color: Colors.white),),
-        const SizedBox(height: 4,),
-        Text(email, style: TextStyle(fontSize: 10, color: Colors.white),),
-      ],
-    )
-  ],
+InkWell(
+  onTap: (){
 
+  },
+  child: Row(
+    children: [
+      CircleAvatar(
+        radius: 30,
+        backgroundImage: NetworkImage(imagem),
+      ),
+      const SizedBox(width: 20,),
+      Column(
+        children: [
+          Text(nome, style: TextStyle(fontSize: 10, color: Colors.white),),
+          const SizedBox(height: 4,),
+          Text(email, style: TextStyle(fontSize: 10, color: Colors.white),),
+        ],
+      )
+    ],
+  
+  ),
 );
